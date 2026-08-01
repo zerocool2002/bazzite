@@ -25,6 +25,14 @@ rpm --import \
 
 dnf5 install -y brave-origin
 
+### Install dcli from COPR
+
+dnf5 -y copr enable theblackdon/dcli
+dnf5 install -y dcli
+
+# Disable COPR so it does not remain enabled in the final image
+dnf5 -y copr disable theblackdon/dcli
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
