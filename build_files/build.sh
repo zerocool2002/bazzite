@@ -25,10 +25,10 @@ rpm --import \
 
 dnf5 install -y brave-origin
 
-### Install dcli from COPR
+### Install dcli-bootc from COPR
 
-dnf5 -y copr enable theblackdon/dcli
-dnf5 install -y dcli
+dnf5 -y copr enable theblackdon/dcli-bootc
+dnf5 install -y dcli-bootc
 
 # Disable COPR so it does not remain enabled in the final image
 dnf5 -y copr disable theblackdon/dcli
