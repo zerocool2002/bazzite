@@ -15,6 +15,16 @@ cp -avf "/ctx/system_files"/. /
 # this installs a package from fedora repos
 dnf5 install -y tmux
 
+### Install Brave Origin
+
+curl -fsSLo /etc/yum.repos.d/brave-browser.repo \
+    https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
+
+rpm --import \
+    https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+
+dnf5 install -y brave-origin
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
