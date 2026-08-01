@@ -31,7 +31,7 @@ dnf5 -y copr enable theblackdon/dcli-bootc
 dnf5 install -y dcli-bootc
 
 # Disable COPR so it does not remain enabled in the final image
-dnf5 -y copr disable theblackdon/dcli
+dnf5 -y copr disable theblackdon/dcli-bootc
 
 # Use a COPR Example:
 #
